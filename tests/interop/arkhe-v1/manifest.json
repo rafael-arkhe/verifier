@@ -21,7 +21,7 @@
   },
   {
     "path": "tests/test_arkhe_interop.py",
-    "sha256": "da4a8ba642005fd38a9c5031146effacb5a1ae5397a874c60280c9d012bd52b2"
+    "sha256": "cc9886bae111030cb883688861167439a49dbda2371f9f41e989f4abae82d452"
   },
   {
     "path": "gravit_verifier/registry.py",

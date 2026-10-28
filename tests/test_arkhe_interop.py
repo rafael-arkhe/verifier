@@ -1,18 +1,26 @@
 """Static contract and rejection boundaries of the isolated Arkhe profile."""
 import copy
 import hashlib
+import importlib.util
 import json
+from pathlib import Path
 
 import pytest
 
-from tools.verify_arkhe_interop import FIXTURES, accepted, replay
+# tools/ is intentionally not an installed package. Load the checkout's reader
+# by path so both the pytest console script and python -m pytest work.
+READER_PATH = Path(__file__).resolve().parents[1] / "tools/verify_arkhe_interop.py"
+SPEC = importlib.util.spec_from_file_location("arkhe_interop_reader", READER_PATH)
+READER = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(READER)
+FIXTURES, accepted, replay = READER.FIXTURES, READER.accepted, READER.replay
 
 JOBS = json.loads((FIXTURES / "arkhe-vectors.json").read_bytes())
 EXPECTED = json.loads((FIXTURES / "expected.json").read_bytes())
 BY_ID = {v["id"]: v for v in JOBS}
 
 
-@pytest.mark.parametrize("job,expected", zip(JOBS, EXPECTED), ids=[v["id"] for v in JOBS])
+@pytest.mark.parametrize("job,expected", list(zip(JOBS, EXPECTED)), ids=[v["id"] for v in JOBS])
 def test_static_verdict(job, expected):
     assert accepted(job) is expected["accepted"]
 
