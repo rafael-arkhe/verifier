@@ -127,7 +127,8 @@ print(decision.final_epistemic_state, decision.status)
 
 ## Arkhe primitive interoperability profile
 
-The isolated [Arkhe v1 exchange](tests/interop/arkhe-v1/README.md) contains eight
+The isolated [Arkhe v1 exchange](tests/interop/arkhe-v1/README.md), for
+[Arkhe](https://arkhe.computer), contains eight
 pinned inclusion, Ed25519 and witness-quorum checks. Run
 `python tools/verify_arkhe_interop.py` to check hashes and static verdicts.
 This profile does not change kernel decisions or establish full Gravit/Arkhe

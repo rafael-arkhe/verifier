@@ -1,5 +1,7 @@
 # Arkhe primitive interoperability profile v1
 
+Project: [Arkhe](https://arkhe.computer).
+
 Frozen 2026-10-28. These eight jobs and their expected verdicts are copied byte
 for byte from the Arkhe workspace's `verification/interop/gravit-golden-v1/`.
 They are a subset of its 2026-10-26 primitive exchange, which pins this upstream

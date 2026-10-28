@@ -13,7 +13,7 @@
   },
   {
     "path": "tests/interop/arkhe-v1/README.md",
-    "sha256": "979b9d24c57bafa09f5ea21091100be4a86c7e6e1868a0446954a122967efa53"
+    "sha256": "e7edded1a258430f7fab0865c18600385af05dd7c71bdd882c65ebeaa15f53d9"
   },
   {
     "path": "tools/verify_arkhe_interop.py",
