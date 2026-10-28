@@ -1,0 +1,17 @@
+{
+  "profile": "arkhe-gravit-golden-v1",
+  "frozen_date": "2026-10-28",
+  "source_workspace_path": "verification/interop/gravit-golden-v1",
+  "source_manifest_sha256": "923435813154b9d527d85a059c68561f5fda314465e73ae183f13ed1eb03b072",
+  "upstream_verifier_commit": "6b2ecbabd098c9a381b0b08184703905c3cb8275",
+  "source_files": [
+    {
+      "path": "arkhe-vectors.json",
+      "sha256": "c2844f18ad41e7290d0cef8b2e7def550f982718fb281e8e5a4558556efa26e1"
+    },
+    {
+      "path": "expected.json",
+      "sha256": "b6f0300cb301ed4ac47f94793445da20c4229db148d9fe688ff2b011278618cc"
+    }
+  ]
+}

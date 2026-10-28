@@ -1,0 +1,42 @@
+[
+  {
+    "id": "merkle-valid-0",
+    "accepted": true,
+    "reason": "RFC 6962 three-leaf tree"
+  },
+  {
+    "id": "merkle-wrong-leaf",
+    "accepted": false,
+    "reason": "wrong-leaf"
+  },
+  {
+    "id": "signature-valid",
+    "accepted": true,
+    "reason": "Ed25519 raw message"
+  },
+  {
+    "id": "signature-tampered",
+    "accepted": false,
+    "reason": "tampered"
+  },
+  {
+    "id": "quorum-valid",
+    "accepted": true,
+    "reason": "two configured operators with distinct keys"
+  },
+  {
+    "id": "quorum-insufficient",
+    "accepted": false,
+    "reason": "insufficient"
+  },
+  {
+    "id": "quorum-dependent",
+    "accepted": false,
+    "reason": "same configured operator"
+  },
+  {
+    "id": "quorum-key-alias",
+    "accepted": false,
+    "reason": "one key under two identities"
+  }
+]

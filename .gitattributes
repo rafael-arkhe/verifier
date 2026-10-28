@@ -1,0 +1,4 @@
+# The interop manifest hashes exact exchanged bytes, including line endings.
+tests/interop/arkhe-v1/* -text
+tools/verify_arkhe_interop.py text eol=lf
+tests/test_arkhe_interop.py text eol=lf

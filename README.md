@@ -125,7 +125,17 @@ decision = kernel.verify(VerificationRequest(
 print(decision.final_epistemic_state, decision.status)
 ```
 
+## Arkhe primitive interoperability profile
+
+The isolated [Arkhe v1 exchange](tests/interop/arkhe-v1/README.md), for
+[Arkhe](https://arkhe.computer), contains eight
+pinned inclusion, Ed25519 and witness-quorum checks. Run
+`python tools/verify_arkhe_interop.py` to check hashes and static verdicts.
+This profile does not change kernel decisions or establish full Gravit/Arkhe
+semantic equivalence.
+
 ## Known open work (not finalized here)
+
 
 - `CANON-NSD-007` is a re-verification-over-time invariant; this kernel is
   stateless per call and only records it as informative. A production
