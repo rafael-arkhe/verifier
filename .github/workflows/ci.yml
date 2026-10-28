@@ -22,6 +22,8 @@ jobs:
         run: pytest -v
       - name: Golden vectors reproduce
         run: python tools/verify_golden.py
+      - name: Frozen Arkhe interoperability primitives
+        run: python tools/verify_arkhe_interop.py
       - name: Worked example of decision explanations is reproducible
         run: |
           python tools/make_explained_examples.py
